@@ -1,0 +1,4 @@
+<input class="date-picker-container" type= "date" [ngModel] ="date_picker" (ngModelChange)="dateChange($event)"/>
+<mat-list>
+    <app-product *ngFor="let product of productList" [product]="product"></app-product>
+</mat-list>
