@@ -8,7 +8,6 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  title = 'Ng7ChartJs By DotNet Techy';
   LineChart = [];
   BarChart = [];
   PieChart: any;
@@ -40,7 +39,7 @@ export class AppComponent implements AfterViewInit {
             data: {
             labels: this.topicValuesService.getTopicNames(),
             datasets: [{
-                label: '# of Votes',
+                label: '# of posts by topic',
                 data: this.topicValuesService.getTopicProductsCount(),
                 backgroundColor: this.tableColor,
                 borderColor: this.tableColor,
@@ -49,7 +48,7 @@ export class AppComponent implements AfterViewInit {
             },
             options: {
             title: {
-                text: 'Bar Chart',
+                text: 'Pie Chart',
                 display: true
             },
             scales: {

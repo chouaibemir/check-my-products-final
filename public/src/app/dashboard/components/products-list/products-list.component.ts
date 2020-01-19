@@ -27,7 +27,7 @@ export class ProductsListComponent implements OnInit {
 
   getProducts() {
     this.productsService.getProducts(this.date_picker ? this.date_picker : this.pipe.transform(Date.now(), 'yyyy-MM-dd')).subscribe(
-      (res)=> {
+      (res) => {
         this.productList = res;
       }
     );

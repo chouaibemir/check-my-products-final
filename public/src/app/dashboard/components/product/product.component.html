@@ -1,12 +1,13 @@
-    <div class="list-content">
-        <div class="img-container">
-            <img [src]="product?.thumbnail">
-        </div>
-        <div class="infos-container">
-                <h3 class="name-container">{{product?.name}}</h3>
-                <p class="tagline-container">{{product?.tagline}}</p>
-                <label class="topic-container">{{product?.topics[0].name}}</label>
-        </div>
-
+<div *ngIf="product">
+  <div class="list-content">
+    <div class="img-container">
+      <img [src]="product?.thumbnail" />
     </div>
-    <mat-divider _ngcontent-c1="" class="mat-divider mat-divider-horizontal" role="separator" aria-orientation="horizontal"></mat-divider>
+    <div class="infos-container">
+      <h3 class="name-container">{{ product?.name }}</h3>
+      <p class="tagline-container">{{ product?.tagline }}</p>
+      <label class="topic-container">{{ product?.topics[0].name }}</label>
+    </div>
+  </div>
+</div>
+<!-- <mat-divider _ngcontent-c1="" class="mat-divider mat-divider-horizontal" role="separator" aria-orientation="horizontal"></mat-divider> -->

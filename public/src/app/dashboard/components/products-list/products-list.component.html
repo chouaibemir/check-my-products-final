@@ -1,4 +1,11 @@
 <input class="date-picker-container" type= "date" [ngModel] ="date_picker" (ngModelChange)="dateChange($event)"/>
 <mat-list>
-    <app-product *ngFor="let product of productList" [product]="product"></app-product>
+    <div *ngIf="productList">
+        <div *ngFor="let product of productList">
+            <app-product [product]="product"></app-product>
+        </div>
+    </div>
+    <div class="no-results" *ngIf="productList.length === 0">
+        <img src="../../../../assets/icon/no-results.png">
+    </div>
 </mat-list>
